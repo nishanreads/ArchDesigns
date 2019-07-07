@@ -1,0 +1,131 @@
+Master Data Management system delivers consolidated, complete and accurate view of business critical master information to all the operational and analytical systems across the enterprise.
+
+Key features needed
+
+• Out of the box support for multiple domains like Customer (including partners, suppliers), Product, Location and Account.
+• Efficiently manage relationship between domains (Customer to Account, Customer to Product, and Customer to Location etc).
+• Categorization, grouping and hierarchical management of master data entities.
+• Easy to configure and administer reference master data.
+• Support for localization and internationalization.
+
+From <http://www.mdmgeek.com/2011/08/03/key-mdm-functionalities/> 
+
+DATA QUALITY
+	• Configurable & easy to implement simple and complex data validations.
+	• Ability to integrate with data quality tools like IBM QualityStage, Trillium.
+	• Real time support for standardization of data (Person and Organization names, Addresses, Phone numbers, Email and Identification numbers).
+
+DUPLICATE RECORD PROCESSING
+	• Powerful data de-duplication algorithm to remove duplicate records (Or identify duplicate records).
+	• MDM product should be able to collect key data elements of master record which is getting added and find duplicates in the repository. This can be achieved by having good fuzzy search algorithm built into the product (As pointed out by Henrik).
+	• Ability to easily configure critical data elements required for matching according to organizations requirements.
+	• Easy to setup survivorship rules to persist accurate, up to date and most recent information resulting in creation of single record.
+
+From <http://www.mdmgeek.com/2011/08/03/key-mdm-functionalities/> 
+
+TRACKING CHANGES
+	• Audit functionality which capture and retrieve WHO – WHEN – WHY changed the data.
+	• Efficient framework to store and retrieve historical information about master data, support regulatory compliances.
+	• Track changes coming from source systems and build cross references to each connected system
+
+From <http://www.mdmgeek.com/2011/08/03/key-mdm-functionalities/> 
+
+SECURITY
+	• Ability to integrate with existing active directory products of the organization.
+	• Easy configuration of data visibility rules (Who can see what? Who can change what?)
+
+From <http://www.mdmgeek.com/2011/08/03/key-mdm-functionalities/> 
+
+
+
+Examples of master data
+
+	1. Reference Data
+	2. Customer Data - Insured Object / Party
+	3. Product Data 
+		a. Catalog of products e offer
+	4. Lines Of Business
+		a. Any new application we add to the IT landscape has to come through this
+		b. Example 	Midcorp
+	5. Employee info
+	
+https://simplicable.com/new/master-data
+
+What is Reference Data?
+Reference Data as we know is the data used to categorize other data within applications and data bases. We usually refer to this data as look-up, code table or domain values. These code tables are usually characterized by code and value pairs. Think of it as set of allowed values for a given field.
+Some of the best examples are – state codes, country codes, gender codes, marital status type codes etc.
+NAICS codes are great example of industry standard reference data sets used for classifying business establishments. For example, according to Federal Statistical Agency in North America, NAICS code for Pizza delivery shops is 722513. Similarly, every business has been given a code and this standardized coding helps in collecting, analyzing and publishing statistical data related to US economy.
+
+From <http://www.mdmgeek.com/2013/03/21/reference-data-management-an-overview/> 
+
+The North American Industry Classification System (NAICS) is the standard used by Federal statistical agencies in classifying business establishments for the purpose of collecting, analyzing, and publishing statistical data related to the U.S. business economy.
+NAICS was developed under the auspices of the Office of Management and Budget (OMB), and adopted in 1997 to replace the Standard Industrial Classification (SIC) system. It was developed jointly by the U.S. Economic Classification Policy Committee (ECPC), Statistics Canada 
+
+, and Mexico's Instituto Nacional de Estadistica y Geografia 
+
+, to allow for a high level of comparability in business statistics among the North American countries.
+This official U.S. Government Web site provides the latest information on plans for NAICS revisions, as well as access to various NAICS reference files and tools. Additional information on the background and development of NAICS is available in the History section of this Web site.
+
+From <https://www.census.gov/eos/www/naics/> 
+
+
+Key features of Reference Data Management Systems
+Earlier I wrote about key functionalities of a Master Data Management System. Here are some of the key features of a Reference Data Management system –
+	1. Security
+		a. Robust interface controlled by role based security to support collaborated authoring of reference data.
+		b. We would be hosting this table in a separate schema and potentially separate server with only read access from calling applciations. The schema write privileges will be available only with select few people.
+	2. Ability to manage and map relationships between different reference data sets which exist in an enterprise.
+	3. Versioning and auditing capability
+		a. Need to see who , when and why the data was updated to back track.
+		b. We would also need the capability to refer to old data .. So version control is also needed. Or we back up if needed.
+	4. Hierarchy management
+		
+	5. Provision reference data via web services to support SOA framework
+		a. In future and as a good practice - this can be done by just putting a web server on top of this table in database.
+		b. For now, we can establish direct jdbc connectivity
+	6. Ability to publish reference data
+		a. How do we inform all applications that something has changed?
+	7. Efficient load/extract functionality
+		
+	8. Good error tolerant search capability
+	9. Support for internationalisation /localisation
+	
+
+From <http://www.mdmgeek.com/2013/03/21/reference-data-management-an-overview/> 
+
+
+
+Language Code	Localisation and Dialect support. To support different languages and dialects within the same language.
+	Example - 
+	        en-US (english for US)
+	        en-UK (english for UK)
+Key	Reference Type + Language Code 
+Reference Type	To distinguish amongst different types of reference data when we have the same table that will hold all reference data. Example - to distinguish between Country and Currency reference data
+Reference Code	Code of the particular record
+Group by	To group the data within a single reference type. Can be application specific. Does not have to be within standard reference data
+Sort Sequence	Can be application specific. Does not have to be part of master reference data
+
+Audit Functionality
+
+Created Date	Audit Functionality. To check WHEN record was CREATED
+Created By	Audit Functionality. To check WHO has CREATED the record
+Creation Comment	Audit Functionality. To check WHY record was CREATED
+Updated Date	Audit Functionality. To check WHEN record was UPDATED
+Updated By	Audit Functionality. To check WHO has UPDATED the record
+Updation Comment	Audit Functionality. To check WHY record was UPDATED
+
+
+
+---------------------------------------
+Sample values
+
+
+Reference Type	Reference Code	Language Code	Reference Description	Version					
+Country	DE	en-US	Germany	1.0					
+Country	DE	de-DE	Deutschland	1.0					
+									
+
+Questions
+
+SIC Code?
+Do we need version control?

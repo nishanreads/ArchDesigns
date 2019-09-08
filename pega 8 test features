@@ -1,0 +1,24 @@
+You can also use the OOTB API to support your higher level tests (e.g. create/update/retrieve cases, assignments and data).
+
+8.3 unit testing avaialble on more types of rules
+
+Activities
+Case types
+Collections
+Data pages
+Data transforms
+Decision tables
+Decision trees
+Declare expressions
+Flows
+Map values
+Report definitions
+Strategies
+When
+
+You can also use the Execute Tests service, which is run by a continuous integration (CI) tool, to run all the Pega unit test cases in your application to validate the quality of your code after every build is created.
+
+
+
+Source 
+https://community.pega.com/knowledgebase/articles/devops-release-pipeline-overview/pega-unit-testing

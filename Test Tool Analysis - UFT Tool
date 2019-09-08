@@ -1,0 +1,33 @@
+UFT Tool
+
+Pros
+Supported for web, mobile and desktop applications.
+Collaboration capabilities - UFT has a shared repository where members of you team can store artifacts, functions, and spreadsheets.
+Using the same license, we can use LeanFT tool as
+ well which overcomes a good number of drawbacks of UFT.
+Ensures you can find objects by the DOM, CSS and XPath
+Presents the test case as a business workflow to
+the tester (simpler to understand).
+Can be easily integrated with widely used test management tool, HP-ALM.
+UFT also has LeanFT bundled with it, allowing automated testing at the api level.
+UFT also has LeanFT bundled with it, allowing automated testing at the api level - if you can convince the developers to let you in there.
+
+
+
+Cons
+can be run only from Windows OS. Does not support Mac OS / iOS , android OS, Linux OS without additional software.
+Scripting language is VB and that is the only language supported. Only one language supported. UFT uses VBScript as its scripting language. 
+Constant need to update every single UX change in the script. Maintenance of Test script is a pain.
+Primarily serves only Fucntional test and not stress, load tests. Multi threading, multiple isntances not supported (?)
+Time consuming in our current system setup to execute and end to end test case. Though the scripting time is less since its easy to create automation scripts, the execution time is relatively higher as it takes the lot of CPU & RAM (? - comment from net. need to confirm with Kiran)
+
+
+Source -
+https://www.altexsoft.com/blog/engineering/comparing-automated-testing-tools-selenium-testcomplete-ranorex-and-more/
+https://www.itcentralstation.com/product_reviews/uft-qtp-review-46726-by-paul-grossman
+https://www.quora.com/What-are-the-pros-and-cons-of-QTP
+https://www.trustradius.com/products/unified-functional-testing/reviews
+
+
+
+
